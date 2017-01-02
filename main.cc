@@ -18,7 +18,7 @@ using namespace std;
 int main()
 {
   srand( time( NULL ) ); // Initialize the random function seed
-  GeneticAlgorithm ga(100, 0.01, 0.95, 10); // pop, mut, cros, elit
+  GeneticAlgorithm ga(POP_SIZE, MUTATION_RATE, CROSSOVER_RATE, ELITE_COUNT); // pop, mut, cros, elit
   Population* population = ga.makePopulation(CHROM_SIZE);
 
   ga.evalPopulation(population); // Initial evaluation
